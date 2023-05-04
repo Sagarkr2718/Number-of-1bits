@@ -1,0 +1,20 @@
+public class Solution {
+    boolean checkBit(int n , int i){
+        if((n&(1<<i))==0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    public int numSetBits(int A) {
+        int count = 0;
+        for(int i = 0 ; i<=31;i++){
+            if(checkBit(A,i)==true){
+                count++;
+            }
+        }
+        return count;
+        
+    }
+}
